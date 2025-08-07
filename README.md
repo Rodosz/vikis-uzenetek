@@ -1,1 +1,91 @@
-Üzenetek
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Napi Romantikus Üzenet Vikinek 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #00BFA6, #37474F);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .message-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 40px;
+      max-width: 500px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>Kedves Vikim! 💕</h1>
+    <p id="daily-message">...betöltés...</p>
+    <footer>Mindig veled, <br> Szerelmed ❤️✨</footer>
+  </div>
+
+  <script>
+    const messages = [
+      "Ma is te vagy a napfény az életemben, baba ☀️😊.",
+      "Szerelmem, minden pillanat veled csodásabb 💖🌸.",
+      "Kincsem, a szívem csak érted dobog ma is 💓🔥.",
+      "Baba, a mosolyod az én legszebb ajándékom 😍🎁.",
+      "Te vagy a napom ragyogása, minden reggel veled kezdődik 🌅🌞.",
+      "Szerelmem, nélküled nem lenne teljes a világom 🌍💔.",
+      "Kincsem, ma is csak rád gondolok egész nap 💭❤️.",
+      "Baba, veled minden nap egy új kaland 🚀💫.",
+      "Te vagy az én örök boldogságom, szerelmem 🌈💞.",
+      "Szeretlek ma, holnap és mindörökké, kincsem ♾️💘.",
+      "Minden nap egy új lehetőség, hogy szeresselek még jobban 💕🌟.",
+      "Veled minden perc varázslat és boldogság 💫😍.",
+      "Szívem minden dobbanása érted szól, kincsem 💖🎶.",
+      "Az életem veled lett teljes és szép 🌸💑.",
+      "A mosolyodban találom meg a nyugalmat és a békét 😊🕊️.",
+      "Mindig a te oldaladon állok, baba ❤️🤗.",
+      "Te vagy az én legszebb történetem, amit újra és újra el akarok mesélni 📖💘.",
+      "Melletted érzem magam igazán otthon 💞🏠.",
+      "Együtt minden akadály könnyebb és szebb 🚀🌈.",
+      "A szerelmünk örök, mint az ég és a csillagok ✨🌌.",
+      "Kincsem, te vagy a legjobb része minden napomnak 🌞💖.",
+      "Veled minden álom valóra válik, baba 🌟🎉.",
+      "Szeretlek minden nevetésedért és könnyedért is 😊😭❤️.",
+      "Te vagy az, aki mellett boldogan öregszem meg 💕👵👴.",
+      "Az élet egy csodás utazás veled, kincsem 🚗💫.",
+      "Mindig te vagy az első gondolatom reggel és az utolsó este 🌅🌙.",
+      "Szerelmünk a legerősebb kötelék a világon 💪💓.",
+      "A szívem minden dobbanásával csak téged szeretlek 💖🎵.",
+      "Te vagy az én örök tavaszom, kincsem 🌷🌼.",
+      "Minden nap hálát adok, hogy te vagy az én szerelmem 🙏❤️."
+    ];
+
+    const today = new Date();
+    const dayIndex = (today.getDate() - 1) % messages.length;
+
+    document.getElementById('daily-message').textContent = messages[dayIndex];
+  </script>
+</body>
+</html>
