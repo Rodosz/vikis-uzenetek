@@ -1,1 +1,0 @@
-Napi üzik
